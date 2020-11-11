@@ -1,0 +1,17 @@
+﻿  Hakaton.cpp
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(103,26): warning C4305: =: усечение из "double" в "float"
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(104,21): warning C4305: =: усечение из "double" в "float"
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(105,24): warning C4305: =: усечение из "double" в "float"
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(106,18): warning C4305: =: усечение из "double" в "float"
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(128,26): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(78,9): warning C4101: ttbusy: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(76,9): warning C4101: tttrucky: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(60,11): warning C4101: motorcycley: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(75,9): warning C4101: ttpasscarmedy: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(74,9): warning C4101: ttpasscary: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(59,11): warning C4101: trucky: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(58,11): warning C4101: passcarmedy: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(57,11): warning C4101: passcary: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(61,11): warning C4101: busy: неиспользованная локальная переменная
+C:\Users\admin\source\repos\Hakaton\Hakaton\Hakaton.cpp(77,9): warning C4101: ttmotorcycley: неиспользованная локальная переменная
+  Hakaton.vcxproj -> C:\Users\admin\source\repos\Hakaton\x64\Debug\Hakaton.exe

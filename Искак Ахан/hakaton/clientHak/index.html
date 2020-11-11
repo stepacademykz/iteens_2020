@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></script>
+<script>
+    window.onload = function() {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title: {
+            text: "Desktop Search Engine Market Share - 2016"
+        },
+        data: [{
+            type: "pie",
+            startAngle: 240,
+            yValueFormatString: "##0.00\"%\"",
+            indexLabel: "{label} {y}",
+            dataPoints: [
+                {y: 79.45, label: "Google"},
+                {y: 7.31, label: "Bing"},
+                {y: 7.06, label: "Baidu"},
+                {y: 4.91, label: "Yahoo"},
+               
+            ]
+        }]
+    });
+    chart.render();
+    
+    }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<style>
+    div>div{
+        padding-top: 2%;
+    }
+</style>
+<body>
+    
+    <div id ='task-1'>
+        <div>1.Рассчитать общую статистику по выбросам за разные периоды:</div>
+        <div>numbers in tons</div>
+        <div id = 'first'></div>
+    </div>
+<br>
+    <div id ='task-2'>
+        <div>.Вывести общую статистику по отдельным видам транспорта за разные периоды
+            времени:</div>
+            <div>numbers in tons</div>
+            <div>For one year</div>
+            <div id="second"></div>
+            <div>For month</div>
+            <div id="second-month"></div>
+
+            <div>For day</div>
+            <div id="second-day"></div>
+
+    </div>
+
+    <div id = 'task-3'>
+        <div>При условии, что количество жителей равно 18 632 169. Найти количество выделя-
+            емого углекислого газа на одного жителя РК</div>
+            <div>numbers in tons</div>
+            <div>for one year</div>
+             <div id ='third'></div>
+            <div>for one month</div>
+            <div id ='third-month'></div>
+
+        <div>for one day</div>
+        <div id ='third-day'></div>
+    </div>
+
+    <div id = 'task-4'>
+<div>Средний выброс вредных веществ в месяц в разрезе каждой области по
+    каждому типу автомобиля (легковой, легковой (средний), грузовой, мотоциклы,
+    автобусы); (2 балла) <strong>numbers in tons </strong></div>
+<div id="region"></div>
+
+    </div>
+
+    <div id='task-5'>
+<div>h.Вывести области по порядку уровня загрязнения от автотранспорта; (2
+    балла)</div>
+    <div id = 'poll'></div>
+
+
+    </div>
+    <canvas id="myChart"></canvas>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+
+        fetch('http://localhost:8080')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+         
+        document.getElementById('first').innerHTML = data.totalTons + " for one year "+"<br>" + data.totalTons/12 +" for one month"+'<br>'+data.totalTons/365+" for one day "
+       let task2 =(time)=>{
+        let string
+        for(let i =0 ; i<data.categories[0].length;i++){
+          string = data.categories[0][i]/time+" "+ data.categories[1][i]+"<br>"+string
+        }
+        return string ;
+       }
+      
+                 document.getElementById('second').innerHTML = task2(1)
+                 document.getElementById('second-month').innerHTML = task2(12)
+                 document.getElementById('second-day').innerHTML = task2(365)
+ 
+                document.getElementById('third').innerHTML= data.totalTons/18632169+'<br>'
+                document.getElementById('third-month').innerHTML= data.totalTons/1863216912/12
+                document.getElementById('third-day').innerHTML= data.totalTons/18632169/365
+                 let namesarr = ['bus','lorry','middle','bike','lightcar']
+                   
+
+                
+                    document.getElementById('region').innerHTML=data.str  +"<br>"+data.key[0]
+                  
+                    let co2rate=()=>{
+                        let rating=""
+                        for(let i =0;i<data.sumarr.length;i++){
+                rating = data.sumarr[i]+"" + "<br>"+ rating    +''
+                  } return rating
+                    }
+                 console.log(co2rate())
+                  document.getElementById('poll').innerHTML=co2rate()
+          
+        
+                  let ctgarr = data.categories[0];
+    ctgarr.reduce((a, b) => a + b, 0);
+    console.log(data.sumarr)
+    let ctgarrsum=0
+
+console.log(data.sumarr[2])
+    for(let i = 0;i<ctgarr.length;i++){
+        ctgarrsum= ctgarr[i]+ctgarrsum
+    }
+    console.log(ctgarrsum)
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title: {
+            text: "Co2 emissions by vehicle type "
+        },
+        data: [{
+            type: "pie",
+            startAngle: 240,
+            yValueFormatString: "##0.00\"%\"",
+            indexLabel: "{label} {y}",
+            dataPoints: [
+                {y: data.categories[0][0]/ctgarrsum*100, label: "bus"},
+                {y: data.categories[0][1]/ctgarrsum*100, label: "lorry"},
+                {y: data.categories[0][2]/ctgarrsum*100, label: "lightcar"},
+                {y: data.categories[0][3]/ctgarrsum*100, label: "middlelightcar"},
+                {y: data.categories[0][4]/ctgarrsum*100, label: "bike"},
+               
+            ]
+        }]
+    });
+    chart.render();
+    
+    var chart = new CanvasJS.Chart("chartContainer2", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true		
+	title:{
+		text: "Basic Column Chart"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+        {y: data.categories[0][0]/ctgarrsum*100, label: "bus"},
+                {y: data.categories[0][1]/ctgarrsum*100, label: "lorry"},
+                {y: data.categories[0][2]/ctgarrsum*100, label: "lightcar"},
+                {y: data.categories[0][3]/ctgarrsum*100, label: "middlelightcar"},
+                {y: data.categories[0][4]/ctgarrsum*100, label: "bike"},
+		]
+	}
+	]
+});
+
+
+var chart = new CanvasJS.Chart("chartContainer3", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true		
+	title:{
+		text: "Basic Column Chart"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+        {y: data.categories[0][0]/ctgarrsum*100, label: "bus"},
+                {y: data.sumarr[0][0]/15000000*100, label:  data.sumarr[0]},
+           
+                {y: data.sumarr[0][0]/15000000*100, label:  data.sumarr[0][1]},
+                {y: data.sumarr[1][0]/15000000*100, label:   data.sumarr[1][1]},
+                {y: data.sumarr[2][0]/15000000*100, label:   data.sumarr[2][1]},
+                {y: data.sumarr[3][0]/15000000*100, label:  data.sumarr[3][1]},
+                {y: data.sumarr[4][0]/15000000*100, label:   data.sumarr[4][1]},
+                {y: data.sumarr[5][0]/15000000*100, label:   data.sumarr[5][1]},
+                {y: data.sumarr[6][0]/15000000*100, label: data.sumarr[6][1]},
+                {y: data.sumarr[7][0]/15000000*100, label:   data.sumarr[7][1]},
+                {y: data.sumarr[8][0]/15000000*100, label:  data.sumarr[8][1]},
+                {y: data.sumarr[9][0]/15000000*100, label:  data.sumarr[9][1]},
+                {y: data.sumarr[10][0]/15000000*100, label:   data.sumarr[10][1]},     
+                {y: data.sumarr[11][0]/15000000*100, label:  data.sumarr[11][1]},
+                {y: data.sumarr[12][0]/15000000*100, label:  data.sumarr[12][1]},        
+		]
+	}
+	]
+});
+chart.render();
+
+
+
+
+
+
+
+
+
+          });
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+        
+        </script>
+</body>
+</html>

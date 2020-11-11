@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\Hackaton\Hackaton\bin\Debug\netcoreapp3.1\Hackaton.exe
+C:\Users\User\source\repos\Hackaton\Hackaton\bin\Debug\netcoreapp3.1\Hackaton.deps.json
+C:\Users\User\source\repos\Hackaton\Hackaton\bin\Debug\netcoreapp3.1\Hackaton.runtimeconfig.json
+C:\Users\User\source\repos\Hackaton\Hackaton\bin\Debug\netcoreapp3.1\Hackaton.runtimeconfig.dev.json
+C:\Users\User\source\repos\Hackaton\Hackaton\bin\Debug\netcoreapp3.1\Hackaton.dll
+C:\Users\User\source\repos\Hackaton\Hackaton\bin\Debug\netcoreapp3.1\Hackaton.pdb
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.AssemblyInfo.cs
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.dll
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.pdb
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.genruntimeconfig.cache
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.ChooseFolder.resources
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.Visualization.resources
+C:\Users\User\source\repos\Hackaton\Hackaton\obj\Debug\netcoreapp3.1\Hackaton.Data.resources

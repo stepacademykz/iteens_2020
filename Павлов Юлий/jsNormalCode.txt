@@ -1,0 +1,270 @@
+/animation/
+var checker8 =0
+var checker5 =0
+more.addEventListener('click',function(){
+    uy67.classList.add("rt56")
+    uy67.classList.remove("rt57")
+    setTimeout("more.style.display ='none'",1000)
+    setTimeout("uy45.style.display ='block'",600)
+    setTimeout("uy45.style.opacity ='0.8'",900)
+})
+hover.addEventListener('mouseover',function(){
+    uoi98.style.display ="block"
+    setTimeout("uoi98.classList.add('gty')",200)
+    checker5=1
+})
+hover.addEventListener('click',function(){
+    if(checker8==0){
+        uoi98.style.display ="block"
+    setTimeout("uoi98.classList.add('gty')",200)
+    checker8=1
+    }
+    else if(checker8==1){
+        setTimeout("uoi98.style.display ='block'",800)
+    checker8=0
+    setTimeout("uoi98.classList.add('gty2')",200)
+    uoi98.classList.remove("gty")
+    }
+})
+hover.addEventListener('mouseout',function(){
+    setTimeout("uoi98.style.display ='block'",800)
+    checker5=0
+    setTimeout("uoi98.classList.add('gty2')",200)
+    uoi98.classList.remove("gty")
+})
+fgt6.addEventListener('click',function(){
+    uy45.style.opacity ="0"
+    setTimeout("uy45.style.display ='none'",900)
+    setTimeout("more.style.display ='block'",900)
+    setTimeout("uy67.classList.add('rt57')",1000)
+    setTimeout("uy67.classList.remove('rt56')",1400)
+    setTimeout("uy67.classList.remove('rt57')",1900)
+})
+var scroll1;
+var timer;
+mainSc.addEventListener('click',function(){
+    scroll1 =window.pageYOffset
+    ScrollToScrollTop()
+    uy45.style.display ='none'
+    uy45.style.opacity ="0"
+    more.style.display ='block'
+    setTimeout("uy67.classList.add('rt57')",100)
+    setTimeout("uy67.classList.remove('rt56')",400)
+    setTimeout("uy67.classList.remove('rt57')",1000)
+})
+scroll2.addEventListener('click',function(){
+    uy45.style.display ='none'
+    uy45.style.opacity ="0"
+    more.style.display ='block'
+    setTimeout("uy67.classList.add('rt57')",100)
+    setTimeout("uy67.classList.remove('rt56')",400)
+    setTimeout("uy67.classList.remove('rt57')",1000)
+})
+scroll3.addEventListener('click',function(){
+    uy45.style.display ='none'
+    uy45.style.opacity ="0"
+    more.style.display ='block'
+    setTimeout("uy67.classList.add('rt57')",100)
+    setTimeout("uy67.classList.remove('rt56')",400)
+    setTimeout("uy67.classList.remove('rt57')",1000)
+})
+scroll4.addEventListener('click',function(){
+    uy45.style.display ='none'
+    uy45.style.opacity ="0"
+    more.style.display ='block'
+    setTimeout("uy67.classList.add('rt57')",100)
+    setTimeout("uy67.classList.remove('rt56')",400)
+    setTimeout("uy67.classList.remove('rt57')",1000)
+})
+scroll5.addEventListener('click',function(){
+    uy45.style.display ='none'
+    uy45.style.opacity ="0"
+    more.style.display ='block'
+    setTimeout("uy67.classList.add('rt57')",100)
+    setTimeout("uy67.classList.remove('rt56')",400)
+    setTimeout("uy67.classList.remove('rt57')",1000)
+})
+function ScrollToScrollTop(){
+    if(scroll1>0){
+        window.scrollTo (0,scroll1)
+        scroll1=scroll1 -150
+        timer = setTimeout(ScrollToScrollTop,35)
+    }
+    else{
+        clearTimeout(timer)
+        window.scrollTo(0,0)
+    }
+}
+/math/
+var allPeople = 18632169;
+var car =3755890;
+var hardCar =446475;
+var mediumCar =241259;
+var motoBike =63058;
+var bus =59516;
+var allCar =0;
+var car2 =15000;
+var hardCar2 =20000;
+var mediumCar2 =25000;
+var bus2 =40000;
+var motoBike2 =7500;
+var oneYear =0;
+var car3 =1252;
+var hardCar3 =1700;
+var mediumCar3 =2100;
+var bus3 =3500;
+var motoBike3 =625;
+var oneMonth =0;
+var car4 =42;
+var hardCar4 =55;
+var mediumCar4 =69;
+var bus4 =110;
+var motoBike4 =110;
+var oneDay =0;
+allCar=car+hardCar+mediumCar+motoBike+bus
+oneMonth=car3+hardCar3+mediumCar3+bus3+motoBike3
+oneYear=car2+hardCar2+mediumCar2+bus2+motoBike2
+var oneDay2 =0;
+var oneMonth2 =0;
+var oneYear2 =0;
+oneDay=car4+hardCar4+mediumCar4+bus4+motoBike4
+var car5 = 0.158642;
+var hardCar5 = 0.199352;
+var mediumCar5 = 0.290802;
+var motoBike5 = 0.1398;
+var bus5 = 0.24021;
+var allValue =0;
+allValue=car5+hardCar5+mediumCar5+motoBike5+bus5
+oneDay2=allValue*oneDay
+oneMonth2=allValue*oneMonth
+oneYear2=allValue*oneYear
+console.log("1.")
+console.log(oneDay2)
+console.log(oneMonth2)
+console.log(oneYear2)
+console.log("2.")
+console.log(car4*car5)
+console.log(hardCar4*hardCar5)
+console.log(mediumCar4*mediumCar5)
+console.log(bus5*bus4)
+console.log(motoBike5*motoBike4)
+console.log(car5*car3)
+console.log(hardCar5*hardCar3)
+console.log(mediumCar5*mediumCar3)
+console.log(bus5*bus3)
+console.log(motoBike5*motoBike3)
+console.log(car5*car2)
+console.log(hardCar5*hardCar2)
+console.log(mediumCar5*mediumCar2)
+console.log(bus5*bus2)
+console.log(motoBike5*motoBike2)
+console.log("3.")
+console.log(allPeople*allValue)
+var checkOpenTo =0;
+open2.addEventListener('click',function(){
+    if(selALL.value =="0"){
+        txt.innerHTML ="Вы не выбрали значение"
+        hty.style.display ="none"
+    }
+     if(selALL.value =="1"){
+        hty.style.display ="block"
+        txt.innerHTML =""
+        rslt2.innerHTML =""+oneDay2+" кг"
+    }
+     if(selALL.value =="2"){
+        hty.style.display ="block"
+        txt.innerHTML =""
+        rslt2.innerHTML =""+oneMonth2+" кг"
+    }
+     if(selALL.value =="3"){
+        hty.style.display ="block"
+        txt.innerHTML =""
+        rslt2.innerHTML =""+oneYear2+" кг"
+    }
+}) 
+b3s.innerHTML ="Выделяется на одного жителя Казахстана кг уг. газа: "+allValue+""
+b4s.innerHTML ="На всех жителей Казахстана выделяется кг уг. газа: "+allValue*allPeople+""
+open3.addEventListener('click',function(){
+    if(selCar.value =="0"||Date2.value =="0"){
+        txt2.innerHTML ="Вы не выбрали все параметры"
+    }
+    else if(selCar.value =="1"&&Date2.value =="1"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+car4*car5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="2"&&Date2.value =="1"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+hardCar4*hardCar5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="3"&&Date2.value =="1"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+motoBike5*motoBike4+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="4"&&Date2.value =="1"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+bus5*bus4+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="1"&&Date2.value =="2"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+car5*car3+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="2"&&Date2.value =="2"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+hardCar3*hardCar5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="3"&&Date2.value =="2"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+motoBike5*motoBike3+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="4"&&Date2.value =="2"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+bus5*bus3+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="1"&&Date2.value =="3"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+car2*car5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="2"&&Date2.value =="3"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+hardCar2*hardCar5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="3"&&Date2.value =="3"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+motoBike5*motoBike2+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="4"&&Date2.value =="3"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+bus5*bus2+" кг"
+        txt2.innerHTML =""
+    }else if(selCar.value =="1"&&Date2.value =="1"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+car1*car5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="2"&&Date2.value =="2"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+hardCar1*hardCar5+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="3"&&Date2.value =="3"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+motoBike5*motoBike1+" кг"
+        txt2.innerHTML =""
+    }
+    else if(selCar.value =="4"&&Date2.value =="4"){
+        hty2.style.display ="block"
+        rslt3.innerHTML =""+bus5*bus1+" кг"
+        txt2.innerHTML =""
+    }
+})

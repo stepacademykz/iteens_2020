@@ -1,0 +1,13 @@
+﻿  Hackathon.cpp
+  Middle_distance.cpp
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(9,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(13,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(15,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(38,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(40,34): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(87,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(98,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(138,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\zhang\source\repos\Hackathon\Hackathon\Middle_distance.cpp(140,30): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Hackathon.vcxproj -> C:\Users\zhang\source\repos\Hackathon\Debug\Hackathon.exe

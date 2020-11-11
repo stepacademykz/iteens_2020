@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="shortcut icon" type="text/css" href="icon.jpg">
+	<title>CO2 STATISTICS</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+
+
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Значение в КГ",  { role: "style" } ],
+        ["День", allts1PD, "#E20338"],
+        ["Месяц", allts1PM, "#FFBEED"],
+        ["Год", allts1PY, "#C9FFBF"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Количество выделяемого углекислого газа на одного жителя РК за разные периоды (в кг)",
+        width: 700,
+        height: 500,
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values1"));
+      chart.draw(view, options);
+  }
+  </script>
+
+
+
+<script type="text/javascript">
+ google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Значение в КГ",  { role: "style" } ],
+        ["Год", alltsY, "#FFE55E"],
+        ["Месяц", alltsM, "#5199FF"],
+        ["День", alltsD, "#E20338"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Общая статистика по выбросам за разные периоды времени (в кг)",
+        subtitle: 'В КГ',
+        width: 700,
+        height: 500,
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
+      chart.draw(view, options);
+  }
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Вид транспорта', 'Год', 'Месяц', 'День'],
+          ['Лекговые автомобили', cars1CY, cars1CM, cars1CD],	
+          ['Грузовые автомобили', trucks1CY, trucks1CM, trucks1CD],
+          ['Лекговые автомобили (средний)', carsMedium1CY, carsMedium1CM, carsMedium1CD],
+          ['Мотоциклы', motorcycles1CY, motorcycles1CM, motorcycles1CD],
+          ['Автобусы 	', buses1CY, buses1CM, buses1CD]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Статистика за 1 единицу транспорта в разные периоды времени',
+            subtitle: 'В КГ',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+
+</head> 
+<body> <b><p id="maintitle">СТАТИСТИКА ПО ВЫБРОСАМ ВРЕДНЫХ ВЕЩЕСТВ В
+АТМОСФЕРУ НА ТЕРРИТОРИИ РК</p></b> <table border="0"> <tr><td><div
+id="barchart_material" style="width: 900px; height:
+500px;"></div></td><td><div id="columnchart_values1" style="width: 900px;
+height: 300px;"></div></td></tr> <tr><td><div id="columnchart_values2"
+style="width: 900px; height: 300px;"></div></td><td><b><p
+id="analitiks">Согласно полученным графикам, на одного жителя РК в день
+приходится 1,97 кг вредных веществ в виде углекислого газа, в месяц - 59,44
+кг, а в год уже целых 730,2 кг вредных веществ. По видам транспорта больше
+всего загрязняют окружающую среду грузовые автомобили. Данная статистика говорит о том, что необходимо принять меры по сокращению выбросов углекислого газа в атмосферу, например, ввести строгий контроль за качеством топлива, иначе жители нашей страны будут страдать от нехватки кислорода и будут подвержены различным заболеваниям.</b></b></p></b></td></tr> </table>
+
+</body>
+</html>

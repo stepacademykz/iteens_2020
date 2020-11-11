@@ -1,0 +1,165 @@
+.table{
+    background-color: blue;
+}
+p{
+    padding: 0;
+}
+.breack{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    transition: 1s;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.breack b{
+   display: none;
+}
+.breack img{
+    width: 20px;
+    height: 20px;
+}
+.breack:hover img{
+   display: none;
+}
+.i{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(75, 63, 153);
+}
+
+.info{
+    height: auto;
+    width: auto;
+    background-color: rgb(10, 8, 22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .text
+{
+    display: none;
+}
+.info:hover .title
+{
+    display: none;
+}
+.info:hover .text
+{
+    padding: 12px;
+    display: block;
+}
+.breack:hover b{
+    display: block;
+    transition: 1s;
+ }
+.breack:hover{
+    width: 120px;
+    height: 30px;
+    background-color: red;
+    
+}
+*{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.sub{
+    font-size: 12px;
+}
+.subtitle{
+    display: flex;
+    justify-content: space-between;
+    background-color: orangered;
+    align-items: center;
+}
+.amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    min-width: 50px;
+    max-width: 50px;
+    background-color: orange;
+    font-size: 13px;
+    color: rgb(19, 16, 41);
+}
+body{
+    background-color: rgb(19, 16, 41);
+}
+.district{
+    min-width:300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.sub-disctrict {
+    min-width:280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.sub-amount
+{
+    min-width: 50px;
+}
+.coll
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    min-width: 63px;
+    max-width: 63px;
+    background-color: rgb(75, 63, 153);
+    font-size: 12px;
+    overflow: hidden;
+}
+.title
+{
+    margin-top: 15px;
+}
+.button
+{
+    background-color: rgb(75, 63, 153);
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 4px;
+}
+.button:hover
+{
+    transition: 1s;
+    background-color:  rgb(115, 102, 199);
+    border: none;
+    outline: none;
+    padding: 7px;
+}  
+.menu{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 195, 255);
+    width: auto;
+    height: auto;
+    opacity: .85;
+    margin: 10px 0px;
+    transition: .2s;
+}
+.sub_button{
+    display: none;
+}
+.menu:hover{
+   opacity: 1;
+   transition: .2s;
+}
+.menu:hover .sub_button{
+    display: block;
+    transition: .2s;
+ }

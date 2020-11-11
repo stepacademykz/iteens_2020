@@ -1,0 +1,29 @@
+#maintitle {
+font-family: 'Bebas Neue', cursive;
+font-size: 30px;
+}
+
+#analitiks {
+font-family: 'Bebas Neue', cursive;
+font-size: 20px;
+overflow: hidden;
+padding: 5px;
+position: relative;
+}
+
+::-webkit-scrollbar-track {
+  background: #D8D8D8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3F3C3C;
+  border-radius: 5px;
+}
+
+::-webkit-resizer {
+  width: 7px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}

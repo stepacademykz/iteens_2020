@@ -1,0 +1,118 @@
+$file_averageMileage_mass = array();
+for($i=0;$i<count($_TRANSPORTS);$i++)
+{
+    echo "<br>".$_TRANSPORTS[$i]."<br>";
+    $file_transport = fopen("data/transport/".$files_path_transport[$i],"r+"); // открытие файла с количеством транспорта
+    $count = 0;
+    while (!feof($file_transport)) // копирование данный из файла в массив
+    {
+        $mass_tranport[$count] = fgets($file_transport, 999); 
+        $count++;
+    }
+    for($i_count=0;$i_count<count($_DISTRICTS);$i_count++)
+    {
+        echo $_DISTRICTS[$i_count ]."=".$mass_tranport[$i_count]."->"."<br>"; //вывод данных 
+        $file_averageMileage = fopen("data/region/".$files_path_averageMileage[$i],"r+");
+        $file_averageMileage_mass[$i_count]=$file_averageMileage;
+        // открытие файла с количеством транспорта
+        $count_average = 0;
+     /*   while (!feof($file_averageMileage)) // копирование данный из файла в массив
+        {
+            $mass_average[$count_average] = fgets($file_averageMileage_mass[$count_average], 999); 
+            echo $mass_average[$count_average]."<br>";
+            $count_average++;
+           
+        }*/
+    }
+}
+
+
+
+///успех !!! я плачу
+
+
+<?php
+//парсинг Регионов из названий файлов
+$_DISTRICTS = array();
+$files_path_averageMileage = array();
+$direction = opendir('data/region');
+$count_files=0;
+while($files = readdir($direction)){ //подсчёт файлов пробег по каталогу
+    if($files =="."||$files==".."||is_dir(''.$files))
+    {
+        continue;
+    }
+    $files_path_averageMileage[$count_files] = $files;
+    $name_files=explode("_", $files); //разбиение названия файла на слова
+    $_DISTRICTS[$count_files]=$rest = substr($name_files[2], 0, strlen($name_files[2])-4); //обрезание лишнего и запись в массив регионов
+    $count_files++;
+ 
+}
+
+$_TRANSPORTS = array();
+$direction = opendir('data/transport');
+$count_files=0;
+$files_path_transport = array();
+while($files = readdir($direction)){ //подсчёт файлов пробег по каталогу 'TRANSPORT'
+    if($files =="."||$files==".."||is_dir(''.$files))
+    {
+        continue;
+    }
+    $files_path_transport[$count_files] = $files;
+    $name_files=explode("_", $files); //разбиение названия файла на слова
+    $_TRANSPORTS[$count_files]=$rest = substr($name_files[2], 0, strlen($name_files[2])-8); //обрезание лишнего и запись в массив регионов
+    $count_files++;
+
+}
+
+
+
+for($tranport=0;$tranport<count($_TRANSPORTS);$tranport++)
+{
+    echo "<br>".$_TRANSPORTS[$tranport]."<br>";
+    $file_transport = fopen("data/transport/".$files_path_transport[$tranport],"r+"); // открытие файла с количеством транспорта
+    $count = 0;
+    while (!feof($file_transport)) // копирование данныx из файла в массив
+    {
+        $mass_tranport[$count] = fgets($file_transport, 999); 
+        $count++;
+    }
+    for($district=0;$district<count($_DISTRICTS);$district++)
+    {
+        $mass_average = array();
+        $file_average=fopen("data/region/".$files_path_averageMileage[$district],"r+");
+        $count_a=0;
+        while(!feof($file_average))
+        {
+            $mass_average[$count_a]=fgets($file_average,100);
+            $count_a++;
+        }
+        fclose($file_average);
+        echo $_DISTRICTS[$district].$mass_tranport[$district].">>>".$mass_average[$tranport]."<br>";
+    }
+}
+
+
+
+
+
+
+
+/*$dir = opendir('data');
+$coun = 0;
+while($files = readdir($dir)){
+    if($files == '.' || $files == '..' || is_dir('' . $file)){
+        continue;
+    }
+  
+    echo $files;
+    echo "<br>";
+    $coun++;
+}
+echo 'Количество файлов: ' . $coun;
+*/
+
+
+
+
+?>
